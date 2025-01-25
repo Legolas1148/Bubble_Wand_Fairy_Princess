@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\unrealeditor\\inc\\bubble_wand\\uht\\bubble_wandgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\x64\\bubble_wandeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\bubble_wand\\definitions.bubble_wand.h",
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\source\\bubble_wand\\bubble_wandgamemode.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\unrealeditor\\inc\\bubble_wand\\uht\\bubble_wandgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

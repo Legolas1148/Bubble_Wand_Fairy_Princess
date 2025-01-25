@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Bubble_Wand",
+			"Path": "..\\Source\\Bubble_Wand.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Bubble_WandEditor",
+			"Path": "..\\Source\\Bubble_WandEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

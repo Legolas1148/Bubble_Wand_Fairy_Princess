@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\source\\bubble_wand\\bubble_wandgamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\x64\\bubble_wandeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\bubble_wand\\definitions.bubble_wand.h",
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\source\\bubble_wand\\bubble_wandgamemode.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\unrealeditor\\inc\\bubble_wand\\uht\\bubble_wandgamemode.generated.h",
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\source\\bubble_wand\\bubble_wandcharacter.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "c:\\games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "c:\\games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\projects\\bubble_wand_fairy_princess\\bubble_wand\\intermediate\\build\\win64\\unrealeditor\\inc\\bubble_wand\\uht\\bubble_wandcharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

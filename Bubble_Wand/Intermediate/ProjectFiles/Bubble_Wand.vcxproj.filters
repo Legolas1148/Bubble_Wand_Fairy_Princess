@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Bubble_Wand.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Bubble_Wand.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Bubble_WandEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Bubble_Wand">
+      <UniqueIdentifier>{9EC1CB7A-1A09-3A12-BD4C-36D0C378E5FA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Bubble_Wand\Bubble_Wand.Build.cs">
+      <Filter>Source\Bubble_Wand</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Bubble_Wand\Bubble_Wand.cpp">
+      <Filter>Source\Bubble_Wand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Bubble_Wand\Bubble_Wand.h">
+      <Filter>Source\Bubble_Wand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Bubble_Wand\Bubble_WandCharacter.cpp">
+      <Filter>Source\Bubble_Wand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Bubble_Wand\Bubble_WandCharacter.h">
+      <Filter>Source\Bubble_Wand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Bubble_Wand\Bubble_WandGameMode.cpp">
+      <Filter>Source\Bubble_Wand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Bubble_Wand\Bubble_WandGameMode.h">
+      <Filter>Source\Bubble_Wand</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
