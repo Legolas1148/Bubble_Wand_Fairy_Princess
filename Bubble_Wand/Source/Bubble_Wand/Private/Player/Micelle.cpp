@@ -7,12 +7,16 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Engine/World.h"
+#include "TimerManager.h"
 
 // Sets default values
 AMicelle::AMicelle()
 {
     // Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     PrimaryActorTick.bCanEverTick = true;
+
+	ShootingCooldown = 1.0f;
+	bCanShoot = true;
 
     // Camera Boom
     CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -55,7 +59,7 @@ void AMicelle::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	maxJumpCount = 2;
 
 	bIsGliding = false;
-	GlideGravityScale = 0.02f;
+	GlideGravityScale = 0.2f;
 	DefaultGravityScale = 2.0f;
 
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -138,14 +142,29 @@ void AMicelle::StopGlide()
 
 void AMicelle::shoot()
 {
-	if (Bubble)
+	if (bCanShoot && Bubble)
 	{
-		FVector SpawnLocation = GetActorLocation() + BubbleSpawnOffset;
-		FRotator SpawnRotation = GetActorRotation();
+		FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() + BubbleSpawnOffset;
+		FRotator SpawnRotation = GetControlRotation();
+
 		UWorld* World = GetWorld();
 		if (World)
 		{
 			GetWorld()->SpawnActor<ABubble>(Bubble, SpawnLocation, SpawnRotation);
 		}
+
+		bCanShoot = false;
+		FTimerHandle TimerHandle;
+		GetWorldTimerManager().SetTimer(
+			TimerHandle, 
+			this, 
+			&AMicelle::ResetCooldown,
+			ShootingCooldown,
+			false);
 	}
+}
+
+void AMicelle::ResetCooldown()
+{
+	bCanShoot = true;
 }

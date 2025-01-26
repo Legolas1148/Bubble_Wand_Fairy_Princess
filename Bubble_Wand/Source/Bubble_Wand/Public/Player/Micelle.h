@@ -53,14 +53,18 @@ public:
 	class UCameraComponent* FollowCamera;
 
 	//Shooting functions
-	
+	bool bCanShoot;
+	void ResetCooldown();
 	void shoot();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shooting")
+	float ShootingCooldown;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Shooting")
 	TSubclassOf<class ABubble> Bubble;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Shooting")
-	FVector BubbleSpawnOffset = FVector(0.0f, 0.0f, 0.0f);
+	FVector BubbleSpawnOffset = FVector(0.0f, 100.0f, 0.0f);
 
 	//Stats
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")

@@ -25,7 +25,7 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BluePrintReadOnly, Category = "Movement")
 	class UProjectileMovementComponent* ProjectileMovement;
-
+	
 	UPROPERTY(VisibleAnywhere, BluePrintReadOnly, Category = "Collision")
 	class USphereComponent* CollisionComponent;
 	

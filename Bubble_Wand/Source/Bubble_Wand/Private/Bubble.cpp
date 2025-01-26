@@ -6,6 +6,7 @@
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Enemies/Muckian.h"
 
 // Sets default values
 ABubble::ABubble()
@@ -14,7 +15,7 @@ ABubble::ABubble()
 	PrimaryActorTick.bCanEverTick = true;
 
 	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
-	CollisionComponent->InitSphereRadius(15.0f);
+	CollisionComponent->InitSphereRadius(30.0f);
 	CollisionComponent->SetCollisionProfileName(TEXT("BlockAllDynamic"));
 	CollisionComponent->OnComponentHit.AddDynamic(this, &ABubble::OnHit);
 	RootComponent = CollisionComponent;
@@ -24,36 +25,33 @@ ABubble::ABubble()
 
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
 	ProjectileMovement->UpdatedComponent = CollisionComponent;
-	ProjectileMovement->InitialSpeed = 1000.0f;
-	ProjectileMovement->MaxSpeed = 1000.0f;
+	ProjectileMovement->InitialSpeed = 1500.0f;
+	ProjectileMovement->MaxSpeed = 1500.0f;
 	ProjectileMovement->bRotationFollowsVelocity = true;
-	ProjectileMovement->bShouldBounce = true;
+	ProjectileMovement->bShouldBounce = false;
 }
 
 // Called when the game starts or when spawned
 void ABubble::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	ConstructorHelpers::FObjectFinder<UStaticMesh> MeshAsset(TEXT("/Game/StarterContent/Props/MaterialSphere.MaterialSphere"));
-	if (MeshAsset.Succeeded())
-	{
-		Mesh->SetStaticMesh(MeshAsset.Object);
-	}
+
 }
 
 // Called every frame
 void ABubble::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void ABubble::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	if (OtherActor && OtherActor != this && OtherComp)
 	{
-		UGameplayStatics::ApplyDamage(OtherActor, Damage, GetInstigatorController(), this, nullptr);
+		if (OtherActor->GetClass()->IsChildOf(AMuckian::StaticClass()))
+		{
+			OtherActor->Destroy();
+		}
 		Destroy();
 	}
 }
