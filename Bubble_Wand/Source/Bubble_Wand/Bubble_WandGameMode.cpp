@@ -12,4 +12,6 @@ ABubble_WandGameMode::ABubble_WandGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+
+
 }
